@@ -1,0 +1,14 @@
+JIKA <kondisi> maka
+     <pernyataan>
+apabila <kondisi 1> MAKA
+     <pernyataan 1>
+LAINNYA
+     <pernyataan 2>
+JIKA <kondisi 1> MAKA
+     <pernyataan 1>
+LAINNYA JIKA <kondisi 2> MAKA
+     <pernyataan 2>
+LAINNYA JIKA kondisi n MAKA
+      pernyataan
+LAINNYA
+      pernyataan MAKA

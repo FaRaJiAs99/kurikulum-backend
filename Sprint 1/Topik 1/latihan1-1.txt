@@ -1,0 +1,23 @@
+
+PENGOPRASIAN WINDOWS
+ step1=> klik start;
+ STEP2=> klik Program; 
+ step3=> klik Microsoft Office > Microsoft word;
+
+JIKA ingin membuat dokumen baru di microsoft word
+ MAKA ketika pertama kali membuka MS word sudah terdapat dokumen kosong yang tersedia
+ATAU klik new dokument pada menu file/ctrl+N
+
+lAINNYA
+
+jIKA ingin membuka file yang sudah dibuat 
+ MAKA bisa klik 'open file' pada menu file dan pilih file yang diinginkan
+ATAU klik icon open file pada toolbar/ctrl+O
+
+KETIKA ingin menyimpan file 
+ MAKA klik save pada menu file
+ATAU klik ctrl+s
+
+KETIKA ingin menutup MS word 
+ MAKA klik tanda silang(X) di pojok kanan atas
+ATAU klik tombol exit pada menu file

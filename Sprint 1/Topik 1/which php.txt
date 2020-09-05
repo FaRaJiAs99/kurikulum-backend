@@ -1,0 +1,3 @@
+mengapa ketika kita menulis "which php" shell(cli) menunjukkan tempat lokasi script php? 
+hal ini di karnakan which adalah suatu perintah di command line untuk menginfokan script yang mana yang digunakan atau lokasi dari php yang di pakai,
+jadi intinya which adalah kata perintah di command line interface untuk mengetahui lokasi dari script

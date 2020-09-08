@@ -1,0 +1,30 @@
+1.(var_dump($d + $e)= int(5) )=(d=3+e='2'):
+ -hasil dari (integer)3 ditambah (string)2 adalah (integer)5
+
+2.var_dump($e == $f)=bool(true)=(e=2 sama dengan f='2'):maka ini benar adanya
+ -dikarnakan ($e) dan ($f) memiliki nilai yang sama walau memiliki tipe data yang berbede 
+
+3.var_dump($e === $f)=bool(false):
+ -walau memiliki nilai yang sama yaitu 2 akan tetapi keduanya tidak identik karna berbeda tipe.
+
+4.var_dump($g)=NULL:
+-karna variabel nilai dari ($g) adalah NULL/hampa 
+
+5.var_dump((bool)$g)=bool(false):
+-karna nilai NULL adalah false
+
+6.var_dump((int)$g)=int(0):
+-nilai dari ($g=null) atau tanpa isi(samadengan kosong) maka nilai bilangannya adalah (0) 
+ dan tipe integer bukan float atau string
+
+7.var_dump(true && false)=bool(false)
+-nilainya (false) karna salah satu tidak memenuhi syarat
+
+8.var_dump(true || false)=bool(true)
+-nilainya (true) karna syaratnya terpenuhi
+
+9.var_dump(false || false)=bool(false)
+-nilainya (false) karna tidak ada yang memenuhi syarat
+
+10.var_dump(!false)=bool(true)
+-apabila tidak (false) maka (true) yaitu lawan dari (false)

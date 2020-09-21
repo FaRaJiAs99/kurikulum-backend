@@ -63,7 +63,7 @@ function keliling_trapesium($AB, $BC, $CD, $DA)
     echo "keliling =".keliling_segitiga($sisi1, $sisi2, $sisi3)."\n";
 }elseif ($pilihan == 2.1) { 
     echo "jari-jari: ";
-    $j2 = (int) trim(fgets(STDIN));
+    $r = (int) trim(fgets(STDIN));
     echo "luas lingkaran: ".luas_lingkaran($r)."\n";
 }elseif ($pilihan == 2.2) {
     echo "jari-jari: ";

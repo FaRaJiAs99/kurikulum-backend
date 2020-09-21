@@ -22,7 +22,7 @@ echo "| \n";
 
 sleep(1);
 
-$duration = 90;
+$duration = 120;
 $durationToMin = $duration*60;
 
 $start = time();

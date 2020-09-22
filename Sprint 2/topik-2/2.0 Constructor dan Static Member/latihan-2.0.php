@@ -1,5 +1,13 @@
 <?php
 class Rumus {
+    
+    public function __construct()
+    {
+        echo "_-_-_-_-_-_-_-_-_-_-_-_\n";
+        echo "|      ~~RUMUS~~      |\n";
+        echo "_+_+_+_+_+_+_+_+_+_+_+_\n";   
+    }
+    
         
         // kotak
         public static function persegiPanjang($p, $l, $rumus) {
@@ -33,11 +41,9 @@ class Rumus {
     }
        
 }    
+$coba = new Rumus();
 
  function Hitung() {
-    echo "_-_-_-_-_-_-_-_-_-_-_-_\n";
-    echo "|      ~~RUMUS~~      |\n";
-    echo "_+_+_+_+_+_+_+_+_+_+_+_\n";
     echo "1.PersegiPanjang"."\n"."2.Lingkaran"."\n"."3.Trapesium"."\n";
     echo "mau ngitung apa: ";
     $pilihan= trim(fgets(STDIN));

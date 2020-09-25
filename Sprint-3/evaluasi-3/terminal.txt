@@ -1,0 +1,207 @@
+fadhilla99@fadhilla99-Lenovo-ideapad-320-14AST:/var/www/html$ mysql -u fadil -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.21-0ubuntu0.20.04.4 (Ubuntu)
+
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database evaluasi;
+Query OK, 1 row affected (0.30 sec)
+
+mysql> use evaluasi;
+Database changed
+mysql> create table siswa;
+ERROR 1113 (42000): A table must have at least 1 column
+mysql> create table siswa (
+    -> id int NOT NULL primary key auto_increment,
+    -> nama varcahar(30),
+    -> nilai int);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'varcahar(30),
+nilai int)' at line 3
+mysql> create table siswa (
+    -> id int NOT null primary key auto_increment,
+    -> nama varchar(40),
+    -> nilai int
+    -> );
+Query OK, 0 rows affected (2.06 sec)
+
+mysql> desc siswa;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int         | NO   | PRI | NULL    | auto_increment |
+| nama  | varchar(40) | YES  |     | NULL    |                |
+| nilai | int         | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+3 rows in set (0.13 sec)
+
+mysql> insert into siswa (nama, nilai) value ('Abdullah', 90),
+    -> ('Muhammad', 100),
+    -> ('Abdurrohim', 80),             
+    -> ('Abdul Aziz', 80),             
+    -> ('Abdillah', 85),         
+    -> ('Adam', 94),        
+    -> ('Ayub', 70),
+    -> ('deni', 79),    
+    -> ('fadhil', 60),
+    -> ('Fauzan', 100),
+    -> ('Fathur', 95),
+    -> ('Fakhri', 65),
+    -> ('Fauzi', 80),      
+    -> ('Fadil', 90),
+    -> ('Farhan', 50),
+    -> ('Gilang', 70),        
+    -> ('irsyad', 45),      
+    -> ('Ibrahim', 100),
+    -> ('Ismail', 95),
+    -> ('Jamal', 70)
+    -> ;
+Query OK, 20 rows affected (0.36 sec)
+Records: 20  Duplicates: 0  Warnings: 0
+
+mysql> select count(nilai) from siswa; 
++--------------+
+| count(nilai) |
++--------------+
+|           20 |
++--------------+
+1 row in set (0.04 sec)
+
+mysql> select * from siswa;            
++----+------------+-------+
+| id | nama       | nilai |
++----+------------+-------+
+|  1 | Abdullah   |    90 |
+|  2 | Muhammad   |   100 |
+|  3 | Abdurrohim |    80 |
+|  4 | Abdul Aziz |    80 |
+|  5 | Abdillah   |    85 |
+|  6 | Adam       |    94 |
+|  7 | Ayub       |    70 |
+|  8 | deni       |    79 |
+|  9 | fadhil     |    60 |
+| 10 | Fauzan     |   100 |
+| 11 | Fathur     |    95 |
+| 12 | Fakhri     |    65 |
+| 13 | Fauzi      |    80 |
+| 14 | Fadil      |    90 |
+| 15 | Farhan     |    50 |
+| 16 | Gilang     |    70 |
+| 17 | irsyad     |    45 |
+| 18 | Ibrahim    |   100 |
+| 19 | Ismail     |    95 |
+| 20 | Jamal      |    70 |
++----+------------+-------+
+20 rows in set (0.00 sec)
+
+mysql> select count(nilai) from siswa;
++--------------+
+| count(nilai) |
++--------------+
+|           20 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql> select AVG(nilai) from siswa;     
++------------+
+| AVG(nilai) |
++------------+
+|    79.9000 |
++------------+
+1 row in set (0.02 sec)
+
+mysql> select * from siswa where nilai >= 80;
++----+------------+-------+
+| id | nama       | nilai |
++----+------------+-------+
+|  1 | Abdullah   |    90 |
+|  2 | Muhammad   |   100 |
+|  3 | Abdurrohim |    80 |
+|  4 | Abdul Aziz |    80 |
+|  5 | Abdillah   |    85 |
+|  6 | Adam       |    94 |
+| 10 | Fauzan     |   100 |
+| 11 | Fathur     |    95 |
+| 13 | Fauzi      |    80 |
+| 14 | Fadil      |    90 |
+| 18 | Ibrahim    |   100 |
+| 19 | Ismail     |    95 |
++----+------------+-------+
+12 rows in set (0.00 sec)
+
+mysql> select * from siswa where nilai <= 80;
++----+------------+-------+
+| id | nama       | nilai |
++----+------------+-------+
+|  3 | Abdurrohim |    80 |
+|  4 | Abdul Aziz |    80 |
+|  7 | Ayub       |    70 |
+|  8 | deni       |    79 |
+|  9 | fadhil     |    60 |
+| 12 | Fakhri     |    65 |
+| 13 | Fauzi      |    80 |
+| 15 | Farhan     |    50 |
+| 16 | Gilang     |    70 |
+| 17 | irsyad     |    45 |
+| 20 | Jamal      |    70 |
++----+------------+-------+
+11 rows in set (0.06 sec)
+
+mysql> select * from siswa where nilai <= 65;
++----+--------+-------+
+| id | nama   | nilai |
++----+--------+-------+
+|  9 | fadhil |    60 |
+| 12 | Fakhri |    65 |
+| 15 | Farhan |    50 |
+| 17 | irsyad |    45 |
++----+--------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from siswa where nilai > 65;
++----+------------+-------+
+| id | nama       | nilai |
++----+------------+-------+
+|  1 | Abdullah   |    90 |
+|  2 | Muhammad   |   100 |
+|  3 | Abdurrohim |    80 |
+|  4 | Abdul Aziz |    80 |
+|  5 | Abdillah   |    85 |
+|  6 | Adam       |    94 |
+|  7 | Ayub       |    70 |
+|  8 | deni       |    79 |
+| 10 | Fauzan     |   100 |
+| 11 | Fathur     |    95 |
+| 13 | Fauzi      |    80 |
+| 14 | Fadil      |    90 |
+| 16 | Gilang     |    70 |
+| 18 | Ibrahim    |   100 |
+| 19 | Ismail     |    95 |
+| 20 | Jamal      |    70 |
++----+------------+-------+
+16 rows in set (0.00 sec)
+
+mysql> select * from siswa where nilai > 80;
++----+----------+-------+
+| id | nama     | nilai |
++----+----------+-------+
+|  1 | Abdullah |    90 |
+|  2 | Muhammad |   100 |
+|  5 | Abdillah |    85 |
+|  6 | Adam     |    94 |
+| 10 | Fauzan   |   100 |
+| 11 | Fathur   |    95 |
+| 14 | Fadil    |    90 |
+| 18 | Ibrahim  |   100 |
+| 19 | Ismail   |    95 |
++----+----------+-------+
+9 rows in set (0.01 sec)
+
+mysql> 

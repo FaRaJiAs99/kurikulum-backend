@@ -1,0 +1,35 @@
+normalisasi: Adalah teknik desain database 
+    atau proses pembuatan tabel(relasi) dalam basis data 
+    untuk mengurangi berlebihnya data yang digunakan
+    dan menghilangkan karakteristik yang tidak diperlukan 
+    seperti Penyisipan, Pembaruan, dan Anomali Penghapusan 
+    dan memastikan data disimpan secara logis.
+    Aturan normalisasi membagi tabel yang lebih besar menjadi tabel yang lebih kecil
+    dan menautkannya mengguanakan hubungan.
+
+
+1NF: 
+    Aturan: >setiap sel tabel berisi satu nilai.
+                sebuah tabel di sebut 1NF jika setiap atribut dari data tersebut
+                hanya memiliki nilai tunggal dalam satu baris, 
+                maka pada tahap 1NF ini tidak diperbolehkan adanya grouping data atau duplikasi data.
+            >setiap record harus unik.
+                yaitu agar untuk membedakan didalam database suatu data dari data lainnya.
+
+2NF:
+    >Aturan-1 seperti 1NF.
+    >Aturan-2 Kunci utama kolom tunggal.  
+    -Syarat 2NF Adalah tidak diperkenankan adanya partial "functional
+      dependency" atau batasan keterkaitan antara 2 attribut
+      dalam suatu tabel kepada primary key dalam sebuah tabel.
+    -Intinya adalah pada 2NF ini tabel harus dipecah berdasarkan primary key.
+    -Membagi tabel yang sebelumnya tunggal atau mem-partisi menjadi 2 tabel.
+     maka table yang satu yang memiliki primary key dan yang satu memiliki foreign key. 
+
+3NF:
+    >Aturan-1 berada di NF2.
+    >Aturan-2 Tidak memilik ketergantungan fungsional transitif.
+              Intinya pada 3NF ini, jika terdapat suatu attribut yang tidak bergantung pada primary key 
+              tapi bergantung pada field yang lain maka atribut-atribut tersebut perlu dipisah ke tabel baru.
+    -didalam bentuk normal yang ke-3 kita membagi tabel yang ada pada 2NF 
+      menjadi tabel yang ke-3 jadinya sekarang ada 3 tabel 
